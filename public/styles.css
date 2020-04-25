@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/** SITE COLOR THEME **/
+/** FONTS **/
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url("fonts/Lato-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("fonts/Lato-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("fonts/Lato-Light.ttf") format("truetype"); }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Lato-Regular", Arial, Helvetica, sans-serif; }
+
+/** COMPONENTS **/
+.afc__button {
+  font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #8cbb3f;
+  border-color: #8cbb3f;
+  padding: 0.5em 0.75em;
+  color: #fff;
+  cursor: pointer;
+  transition: 150ms ease-in-out; }
+  .afc__button:hover {
+    background: #5a7720;
+    border-color: #5a7720; }
+
+.afc__divider {
+  width: 20em;
+  border: none;
+  height: 3px;
+  background: #c6dc81;
+  margin-bottom: 2.5em; }
+
+.afc__nav-item {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 0.75em;
+  cursor: pointer;
+  padding: 0.5em;
+  font-size: 1.125rem; }
+  .afc__nav-item:hover {
+    border-bottom: 2px solid #c6dc81; }
+
+.afc__image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%; }
+
+.afc__icon {
+  display: block;
+  height: 6.5em;
+  margin: 0 auto; }
+
+.afc__text-content {
+  padding: 0 2em; }
+
+.afc__cta {
+  margin-bottom: 3em; }
+
+.page-wrapper {
+  padding: 0 1em; }
+
+.page-container {
+  max-width: 960px;
+  margin: 0 auto; }
+  .page-container section {
+    margin-bottom: 3em; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.section-heading {
+  font-size: 3em !important;
+  font-family: 'Lato-Bold';
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.heading-L {
+  font-size: 3em !important;
+  font-family: 'Lato-Bold';
+  font-weight: 700; }
+
+.heading-M {
+  font-size: 1.75em !important;
+  font-weight: 700; }
+
+.heading-S {
+  font-size: 1.125em !important;
+  font-family: 'Lato-Bold';
+  font-weight: 700;
+  text-transform: uppercase !important; }
+
+.mb-S {
+  margin-bottom: 1em !important; }
+
+.mb-M {
+  margin-bottom: 2.5em !important; }
+
+.mb-L {
+  margin-bottom: 4em !important; }
+
+/** PAGE STYLES **/
+.afc__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  padding: 1em 0; }
+
+.afc__primary-logo {
+  height: 6.5em; }
+
+.afc__nav-btn {
+  display: inline-block; }
+
+.afc__highlight-list {
+  display: flex;
+  padding: 0; }
+  .afc__highlight-list li {
+    list-style: none;
+    padding: 1.5em; }
+
+.afc__bio-pic {
+  height: 18em;
+  float: left;
+  margin-right: 3em;
+  margin-bottom: 1em; }
+
+.afc__text-content {
+  font-size: 1.25em; }
+
+.afc__testimonials blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 12px;
+  quotes: "“" "”" "‘" "’";
+  font-style: italic;
+  text-align: center; }
+
+.afc__testimonials:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; }
+
+.afc__testimonials:after {
+  visibility: hidden;
+  content: close-quote; }
+
+.afc__packages-grid {
+  display: flex;
+  flex-wrap: wrap; }
+
+.afc__package {
+  flex: 1 0 50%;
+  text-align: center;
+  margin-top: 1em;
+  padding: 0 1em; }
+  .afc__package:not(:nth-child(-n+2)) {
+    margin-top: 4.5em; }
+
+.afc__product-img {
+  height: 250px;
+  width: auto; }
+
+.afc__contact {
+  display: flex;
+  padding-top: 1.5em; }
+  .afc__contact > div {
+    flex: 1 0 50%; }
+
+.afc__faq dt {
+  font-weight: 700;
+  margin-bottom: 0.5em; }
+
+.afc__faq dd {
+  margin-left: 0;
+  margin-bottom: 1.5em; }
+
+.afc__contact-img img {
+  display: block;
+  height: 18em;
+  width: 18em;
+  margin: 0 auto; }
+
+/* FORM */
+.afc__payment-form {
+  max-width: 400px;
+  margin: 0 auto; }
+  .afc__payment-form button {
+    margin-top: 1.5em; }
+
+.afc__form-field {
+  margin-top: 1em; }
+  .afc__form-field > label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 0.75em;
+    font-weight: 700; }
+  .afc__form-field > input, .afc__form-field > textarea {
+    width: 60%;
+    padding: 7px 12px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    font-size: 1em; }
+  .afc__form-field .StripeElement {
+    padding: 10px 12px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    font-size: 1em; }
+
+.full-name {
+  display: flex; }
+  .full-name input {
+    width: 80%; }
