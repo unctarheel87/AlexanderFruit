@@ -375,6 +375,12 @@ a.afc-button {
     background-image: url("images/photos/BEETS.jpg"); }
   .afc-hero--about {
     background-image: url("images/photos/HIGHRES_ABOUT_BANNER.jpg"); }
+    .afc-hero--about > div {
+      margin-left: 1.5em; }
+      @media (max-width: 40em) {
+        .afc-hero--about > div {
+          align-self: flex-end;
+          margin-bottom: 2.5em; } }
 
 .afc-highlights__list {
   display: flex;
@@ -452,6 +458,8 @@ a.afc-button {
     .afc-package {
       width: 100%;
       margin-bottom: 5.5em; } }
+  .afc-package p, .afc-package li {
+    color: #606261; }
   .afc-package__desc {
     margin-top: 0em; }
   .afc-package__img {
@@ -498,8 +506,7 @@ a.afc-button {
 .afc-faq dd {
   margin-left: 2.125em;
   padding-bottom: 1em;
-  margin-bottom: 0.5em;
-  overflow: hidden; }
+  margin-bottom: 0.5em; }
 
 .afc-ned-test {
   position: relative; }
@@ -509,10 +516,10 @@ a.afc-button {
     position: absolute;
     background: url("images/icons/light_triple_squiggle.png") no-repeat;
     background-size: contain;
-    height: 60px;
+    height: 50px;
     width: 180px;
-    right: 10%;
-    top: -60px;
+    right: 0;
+    top: -100px;
     transform: rotate(-90deg); }
 
 .afc-accordion__header {

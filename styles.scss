@@ -545,6 +545,15 @@ a.afc-button {
 
   &--about {
     background-image: url('images/photos/HIGHRES_ABOUT_BANNER.jpg');
+
+    > div {
+      margin-left: 1.5em;
+
+      @include break-point('small') {
+        align-self: flex-end;
+        margin-bottom: 2.5em;
+      }
+    }
   }
 }
 
@@ -656,6 +665,10 @@ a.afc-button {
     margin-bottom: 5.5em;
   }
 
+  p, li {
+      color: $testimonials-text;
+  }
+
   &__desc {
     margin-top: 0em;
   }
@@ -719,7 +732,6 @@ a.afc-button {
     margin-left: 2.125em;
     padding-bottom: 1em;
     margin-bottom: 0.5em;
-    overflow: hidden;
   }
 }
 
@@ -732,15 +744,16 @@ a.afc-button {
       position: absolute;
       background: url('images/icons/light_triple_squiggle.png') no-repeat;
       background-size: contain;
-      height: 60px;
+      height: 50px;
       width: 180px;
-      right: 10%;
-      top: -60px;
+      right: 0;
+      top: -100px;
       transform: rotate(-90deg);
   }
 }
 
 .afc-accordion {
+
   &__header {
     cursor: pointer;
     margin: 0;
