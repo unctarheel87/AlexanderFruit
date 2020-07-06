@@ -6,216 +6,291 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/iwo7mrm.css">
 </head>
 
 <body>
     <div class="page-wrapper">
+        <div id="mobile-nav" class="afc-mobile-nav">
+            <div class="afc-mobile-nav__header">
+                <a href="/"><img class="afc-mobile-nav__logo" src="images/icons/Secondarylogo@4x.png"></a>
+                <button id="mobilenav-close-btn" class="afc-mobile-nav__close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                    </svg>
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <li class="afc-mobile-nav__menu-item"><a href="how-it-works.html">How it works</a></li>
+                    <li class="afc-mobile-nav__menu-item"><a href="about.html">About</a></li>
+                    <li class="afc-mobile-nav__menu-item afc-mobile-nav__menu-item--cta"><a href="choose-your-package.html">Choose your package</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="page-container">
-            <header class="afc__header">
-                <img class="afc__primary-logo" src="images/Primarylogo@4x.png">
-                <nav class="afc__navbar">
+            <header class="afc-header">
+                <a href="/"><img class="afc-header__logo" src="images/icons/Primarylogo@4x.png"></a>
+                <nav class="afc-nav">
                     <ul>
-                        <li class="afc__nav-item">How it works</li>
-                        <li class="afc__nav-item">About</li>
-                        <li class="afc__nav-btn"><button class="afc__button">Choose your package</button></li>
+                        <li class="afc-nav__menu-item"><a href="how-it-works.html">How it works</a></li>
+                        <li class="afc-nav__menu-item"><a href="about.html">About</a></li>
+                        <li class="afc-nav__cta-btn"><a class="afc-button" href="choose-your-package.html">Choose your package</button></a>
                     </ul>
+                    <button id="mobile-nav-trigger" class="afc-nav__mobilenav-trigger">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor" /></svg>
+                    </button>
                 </nav>
             </header>
-            <a href="checkout.html">Checkout</a>
-            <section class="afc__hero">
-                <img class="afc__image" src="images/HealthyFoodDeliveredNEW.png">
-            </section>
-            <section class="afc__highlight">
-                <p class="afc__text-content heading-M mb-M text-center">It’s complicated out there, so let’s keep things simple:<br>
-                    we’re here to deliver healthy and affordable produce to you and the people you love.
-                </p>
-                <ul class="afc__highlight-list">
-                    <li class="text-center">
-                        <img class="afc__icon" src="images/Broccoli@4x.png">
-                        <h3 class="heading-S">The freshest produce</h3>
-                        <p>​We know how to pick ‘em. With over a decade of experience partnering with local farmers,
-                            we’re your trusted experts to safely bring you the best of what’s in season.</p>
-                    </li>
-                    <li class="text-center">
-                        <img class="afc__icon" src="images/Delivery@4x.png">
-                        <h3 class="heading-S">Free delivery</h3>
-                        <p>No delivery fees. No inconvenient pickups. Whatever package you choose, we carefully drop it
-                            off on your doorstep, making your week healthier, easier, and brighter.</p>
-                    </li>
-                    <li class="text-center">
-                        <img class="afc__icon" src="images/Happy@4x.png">
-                        <h3 class="heading-S">Easy and affordable</h3>
-                        <p>Now more than ever, we’re removing any obstacles to eating healthy. With our tried-and-true
-                            business model, you get premium produce without premium prices.</p>
-                    </li>
-                </ul>
-                <div class="afc__cta text-center">
-                    <button class="afc__button">Choose you package</button>
+            <section class="afc-hero afc-hero--home">
+                <div>
+                    <h1 class="afc-hero__tagline">Healthy food, delivered.</h1>
+                    <p class="paragraph-24">The freshest, expertly-selected fruit and veggies, brought right to your
+                        front door.</p>
+                    <button class="afc-button center-block">Choose your package</button>
                 </div>
             </section>
-            <hr class="afc__divider">
-            <section class="afc__about" id="afc-about">
-                <img class="afc__bio-pic" src="images/NEW NED BIO PIC@4x.png">
-                <h3 class="heading-L text-right">Hi! I'm Ned.</h3>
-                <p class="text-right">​I’m a drum-playing husband, dad of two, avocado aficionado, and co-founder of The
-                    Alexander Fruit Company.</p>
-                <p class="text-right">10 years ago in the farmer’s market parking lot, we started our company delivering
-                    25 paper bags of produce to friends and family. Our business grew and we quickly became the produce
-                    delivery service of choice to over 400 happy families in the Triangle. We brought the freshest
-                    fruits and veggies to them, and they enjoyed the ease of living a healthy lifestyle.</p>
-                <p class="text-right">When Hurricane Michael destroyed our facility, we made the choice to pivot and
-                    provide fruit to incredible corporate offices around the Triangle. Now that we (and the world) are
-                    faced with another unforeseen crisis, we’re coming back to our roots, serving families with the most
-                    basic need: fresh food to eat.</p>
-            </section>
-            <section class="afc__photo-section">
-                <img class="afc__image" src="images/CUTTING.png">
-            </section>
-            <section class="afc__highlight afc__how-it-works" id="afc-how-it-works">
-                <p class="heading-M text-center">We believe that access to healthy food is a right, not a luxury.</p>
-                <p class="afc__text-content mb-M text-center">We’re committed to bringing the freshest fruits and veggies to your door, so you
-                    can reap the benefits of a healthy lifestyle today and always.</p>
-                <hr class="afc__divider mb-L">
-                <h3 class="section-heading text-center">How it works</h3>
-                <ul class="afc__highlight-list">
-                    <li class="text-center">
-                        <img class="afc__icon" src="images/Hand@4x.png">
-                        <h3 class="heading-S">Choose your package</h3>
-                        <p>​Become a weekly subscriber by choosing the best package for you and your family.</p>
-                    </li>
-                    <li class="text-center">
-                        <img class="afc__icon" src="images/Carrot@4x.png">
-                        <h3 class="heading-S">We pick you produce</h3>
-                        <p>Each week, we partner with the best farmers and produce vendors in NC to get the perfect
-                            produce ready for your package.</p>
-                    </li>
-                    <li class="text-center">
-                        <img class="afc__icon" src="images/Produce Box@4x.png">
-                        <h3 class="heading-S">Get your delivery</h3>
-                        <p>Open your door. Grab your package. Enjoy your food. It’s that simple, and it tastes so good.
-                        </p>
-                    </li>
-                </ul>
-                <div class="afc__cta text-center">
-                    <button class="afc__button">Choose you package</button>
+            <div class="afc-accent-block">
+                <div class="afc-container">
+                    <p class="paragraph-28 afc-text-content text-center">It’s complicated out there, <i>so let’s keep
+                            things
+                            simple</i>:<br>
+                        we bring superior produce to you and the people you love, at affordable prices.
+                    </p>
+                </div>
+            </div>
+            <section class="afc-section afc-section--dark afc-lime afc-lime--left afc-lime--right mb-M">
+                <div class="afc-highlights afc-container">
+                    <ul class="afc-highlights__list">
+                        <li class="text-center">
+                            <img class="afc-icon" src="images/icons/apple.png">
+                            <h3 class="afc-heading-S">The freshest produce</h3>
+                            <p>​We know how to pick ‘em. With over a decade of experience partnering with local farmers,
+                                we’re your trusted experts to safely bring you the best of what’s in season.</p>
+                        </li>
+                        <li class="text-center">
+                            <img class="afc-icon" src="images/icons/smiley.png">
+                            <h3 class="afc-heading-S">Free delivery</h3>
+                            <p>No delivery fees. No inconvenient pickups. Whatever package you choose, we carefully drop
+                                it
+                                off on your doorstep, making your week healthier, easier, and brighter.</p>
+                        </li>
+                        <li class="text-center">
+                            <img class="afc-icon" src="images/icons/delivery_truck.png">
+                            <h3 class="afc-heading-S">Easy and affordable</h3>
+                            <p>Now more than ever, we’re removing any obstacles to eating healthy. With our
+                                tried-and-true
+                                business model, you get premium produce without premium prices.</p>
+                        </li>
+                    </ul>
+                    <button class="afc-button center-block mb-S">Learn more</button>
                 </div>
             </section>
-            <section class="afc__testimonials">
-                <blockquote>By having the high quality produce delivered right to me, I don't spend the time at the
-                    grocery store picking over produce; I don't have to spend time planning what to eat; and I don't
-                    have to worry about having enough time to get to the store to buy healthy food - it’s all right
-                    there for me!<br>
-                    <br>- Elizabeth, Raleigh</blockquote>
-            </section>
-            <section class="afc__photo-section">
-                <img class="afc__image" src="images/CUTTING.png">
-            </section>
-            <section class="afc__packages">
-                <h2 class="section-heading text-center">Our Packages</h2>
-                <div class="afc__packages-grid">
-                    <div class="afc__package">
-                        <img class="afc__product-img" src="images/familypackage.jpg">
-                        <h3>Family Package</h3>
-                        <p class="afc__pkg-price">$35</p>
-                        <p class="afc__pck-description">Vegetarians and cooks- this is the package for you! If you’re
-                            here for the veggies and wanna pass on fruit, we’ve got you covered.<br>
-                            <br>Best for: veggie fanatics.</p>
-                        <button class="afc__button">Choose this package</button>
+            <section class="afc-section afc-about">
+                <div class="afc-container afc-flex fifty-fifty flex-reverse-wrap mb-M">
+                    <div>
+                        <h3 class="afc-heading-L">Hi! I'm Ned.</h3>
+                        <p class="paragraph-20 mb-M">For over 10 years, my team and I
+                            have brought the best fruits and
+                            veggies to homes all over the
+                            Triangle and Piedmont area. We’re
+                            family-owned, fruit-obsessed,
+                            and proud to bring you <i>better
+                                produce than you’ll find at the
+                                grocery store</i>.</p>
+                        <button class="afc-button">Read our story</button>
                     </div>
-                    <div class="afc__package">
-                        <img class="afc__product-img" src="images/JUNIOR.jpg">
-                        <h3>Junior Package</h3>
-                        <p class="afc__pkg-price">$35</p>
-                        <p class="afc__pck-description">For students, singles, and couples, the Junior Package delivers
-                            smaller portions of at least 6 kinds of veggies and 3 kinds of fruits.<br>
-                            <br>​Best for: smaller households and modest foodies.</p>
-                        <button class="afc__button">Choose this package</button>
-                    </div>
-                    <div class="afc__package">
-                        <img class="afc__product-img" src="images/ALLVEG.jpg">
-                        <h3>All Veg</h3>
-                        <p class="afc__pkg-price">$35</p>
-                        <p class="afc__pck-description">Vegetarians and cooks- this is the package for you! If you’re
-                            here for the veggies and wanna pass on fruit, we’ve got you covered.<br>
-                            <br>Best for: veggie fanatics.</p>
-                        <button class="afc__button">Choose this package</button>
-                    </div>
-                    <div class="afc__package">
-                        <img class="afc__product-img" src="images/ALLFRUIT.jpg">
-                        <h3>All Fruit</h3>
-                        <p class="afc__pkg-price">$35</p>
-                        <p class="afc__pck-description">The name speaks for itself. The All Fruit package includes
-                            varieties of perfectly-picked fruits in ample portions.<br>
-                            <br> Best for: fruit lovers that aren’t as into veggies (we won’t judge ya).</p>
-                        <button class="afc__button">Choose this package</button>
+                    <div>
+                        <div class="afc-image-container__bio center-block">
+                            <img class="afc-image" src="images/photos/HOME_IMNED.jpg">
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="afc__photo-section">
-                <img class="afc__image" src="images/FARMERSMARKET.png">
-            </section>
-            <section class="afc__faq">
-                <h3 class="section-heading">FAQ</h3>
-                <dl>
-                    <dt>How is your produce different from what’s in the grocery store?</dt>
-                    <dd>Choosing The Alexander Fruit Company means you get the freshest and highest-quality fruits and
-                        veggies, chosen by an expert just for you. Plus, you don’t have to go to the grocery store or
-                        worry about all the hands that touched that apple you’re eating. Win-win.</dd>
-                    <dt>How often do we get our delivery?</dt>
-                    <dd>We bring your produce to you every Thursday, unless you want to skip a week (that’s fine by
-                        us!).</dd>
-                    <dt>Where do you deliver?</dt>
-                    <dd>We will deliver to Raleigh, Durham, Cary, and Knightdale and a bit beyond. Any deliveries past
-                        our range would incur a small ($5) delivery fee.</dd>
-                    <dt>Am I locked into a contract?</dt>
-                    <dd>Nope. You can cancel your weekly membership at any time (although we doubt you’ll want to!) by
-                        letting us know by the Sunday before midnight of the week you’d like to cancel.</dd>
-                    <dt>Are there any extra fees?</dt>
-                    <dd>No sign up fee. No delivery fee in our main delivery areas. No confusing deposits or surcharges.
-                        Just the price of your perfectly picked produce package.</dd>
-                    <dt>Can I customize my package?</dt>
-                    <dd>For now we don’t offer customized packages.</dd>
-                    <dt>Can I skip a week?</dt>
-                    <dd>You can skip any week by emailing us at ned@alexanderfruit.com before Sunday at midnight. SKIP
-                        requests received after Sunday at MIDNIGHT automatically become part of our Give program. This
-                        means we discount your package $10 and donate your produce to a local family in need since we
-                        have likely already bought your food from our all-star farmers & vendors.</dd>
-                    <dt>Is this organic?</dt>
-                    <dd>We love to include some local and/or organic options when they’re available at the farmer’s
-                        market, but our biggest priority is top-tier, delicious produce at an unbeatable price.</dd>
-                    <dt>What kind of fruits and veggies will I get?</dt>
-                    <dd>The variety will change week-to-week depending on what’s available at the farmers market. Some
-                        items will be staples like leafy greens, root veggies, onions, apples and bananas. But many
-                        items will change weekly to keep your meals interesting.</dd>
-                </dl>
-            </section>
-            <section class="afc__testimonials">
-                <blockquote>Having your produce over the last 8 years has been a gift through every season. No matter
-                    what's going on in our lives, I know my kids, my husband and I will have easy, healthy options on
-                    hand. Thank you for always going above and beyond to make sure high-quality fruits and veggies fill
-                    our deliveries.<br>
-                    <br>- Kristen, Chapel Hill</blockquote>
-            </section>
-            <section>
-                <p class="heading-M text-center">Ready to get healthy fruits and veggies delivered to your doorstep?
-                </p>
-                <div class="afc__cta text-center">
-                    <button class="afc__button">Choose you package</button>
+            <div class="afc-section afc-section--dark afc-testimonials">
+                <div class="afc-container">
+                    <blockquote>"By having the high quality produce delivered right to me, I don't spend the time at the
+                        grocery store picking over produce; I don't have to spend time planning what to eat; and I don't
+                        have to worry about having enough time to get to the store to buy healthy food - it’s all right
+                        there for me!"<br>
+                        <br>- Elizabeth, Raleigh</blockquote>
+                </div>
+            </div>
+            <div class="afc-section--lime afc-accent-block afc-lime afc-lime--left afc-lime--right">
+                <div class="afc-container">
+                    <div class="afc-flex flex-wrap fifty-fifty afc-content-block">
+                        <div>
+                            <div class="afc-image-container__package center-block">
+                                <img class="afc-image" src="images/photos/HOME_FRUITLAYOUT.jpg">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="paragraph-28 text-bold mb-M">We believe that access to healthy food is a
+                                right, not a
+                                luxury.
+                            </p>
+                            <p class="paragraph-22">We’re committed to bringing the freshest
+                                fruits and
+                                veggies to your door, so you can reap the benefits of a healthy lifestyle today and
+                                always.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="afc-section afc-packages">
+                <div class="afc-container">
+                    <h2 class="afc-section-heading afc-section-heading--accent text-center">Our Packages</h2>
+                    <div class="afc-packages__grid">
+                        <div class="afc-package">
+                            <div class="afc-package__img">
+                                <img src="images/familypackage.jpg">
+                                <span class="afc-package__price">$35</span>
+                            </div>
+                            <h3 class="afc-heading-S text-center">Family Package</h3>
+                            <p class="afc-package__desc text-center">Vegetarians and cooks- this is the package for you!
+                                If you’re
+                                here for the veggies and wanna pass on fruit, we’ve got you covered.<br>
+                                <br>Best for: veggie fanatics.</p>
+                            <button class="afc-button">Choose this package</button>
+                        </div>
+                        <div class="afc-package">
+                            <div class="afc-package__img">
+                                <img src="images/JUNIOR.jpg">
+                                <span class="afc-package__price">$35</span>
+                            </div>
+                            <h3 class="afc-heading-S text-center">Junior Package</h3>
+                            <p class="afc-package__desc text-center">For students, singles, and couples, the Junior
+                                Package delivers
+                                smaller portions of at least 6 kinds of veggies and 3 kinds of fruits.<br>
+                                <br>​Best for: smaller households and modest foodies.</p>
+                            <button class="afc-button">Choose this package</button>
+                        </div>
+                        <div class="afc-package">
+                            <div class="afc-package__img">
+                                <img src="images/ALLVEG.jpg">
+                                <span class="afc-package__price">$35</span>
+                            </div>
+                            <h3 class="afc-heading-S text-center">All Veg</h3>
+                            <p class="afc-package__desc text-center">Vegetarians and cooks- this is the package for you!
+                                If you’re
+                                here for the veggies and wanna pass on fruit, we’ve got you covered.<br>
+                                <br>Best for: veggie fanatics.</p>
+                            <button class="afc-button">Choose this package</button>
+                        </div>
+                        <div class="afc-package">
+                            <div class="afc-package__img">
+                                <img src="images/ALLFRUIT.jpg">
+                                <span class="afc-package__price">$35</span>
+                            </div>
+                            <h3 class="afc-heading-S text-center">All Fruit</h3>
+                            <p class="afc-package__desc text-center">The name speaks for itself. The All Fruit package
+                                includes
+                                varieties of perfectly-picked fruits in ample portions.<br>
+                                <br> Best for: fruit lovers that aren’t as into veggies.</p>
+                            <button class="afc-button">Choose this package</button>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <hr class="afc__divider">
-            <section class="afc__contact">
-                <div class="afc__contact-text">
-                    <p class="heading-M">Have questions?<br>We’re here to help.</p>
-                    <p>Email us with any questions you have.</p>
-                    <button class="afc__button">Contact us</button>
-                </div>
-                <div class="afc__contact-img">
-                    <img src="images/NEW NED AND SILAS@4x.png">
+            <div class="afc-image-block afc-image-container__full afc-image-container__full--home-banana">
+
+            </div>
+            <section class="afc-section afc-section--dark afc-lime afc-lime--left afc-lime--right mb-0"
+                id="afc-how-it-works">
+                <div class="afc-highlights afc-container">
+                    <h3 class="afc-section-heading text-center">How it works</h3>
+                    <ul class="afc-highlights__list">
+                        <li class="text-center">
+                            <img class="afc-icon" src="images/icons/pick_package.png">
+                            <h3 class="afc-heading-S">Choose your package</h3>
+                            <p>​Become a weekly subscriber by choosing the best package for you and your family.</p>
+                        </li>
+                        <li class="text-center">
+                            <img class="afc-icon" src="images/icons/broccoli.png">
+                            <h3 class="afc-heading-S">We pick you produce</h3>
+                            <p>Each week, we partner with the best farmers and produce vendors in NC to get the perfect
+                                produce ready for your package.</p>
+                        </li>
+                        <li class="text-center">
+                            <img class="afc-icon" src="images/icons/gps.png">
+                            <h3 class="afc-heading-S">Get your delivery</h3>
+                            <p>Open your door. Grab your package. Enjoy your food. It’s that simple, and it tastes so
+                                good.
+                            </p>
+                        </li>
+                    </ul>
+                    <button class="afc-button center-block mb-S">Choose you package</button>
                 </div>
             </section>
+            <section class="afc-section afc-testimonials">
+                <div class="afc-container">
+                    <blockquote>Having your produce over the last 8 years has been a gift through every season. No
+                        matter
+                        what's going on in our lives, I know my kids, my husband and I will have easy, healthy options
+                        on
+                        hand. Thank you for always going above and beyond to make sure high-quality fruits and veggies
+                        fill
+                        our deliveries.<br>
+                        <br>- Kristen, Chapel Hill</blockquote>
+                </div>
+            </section>
+            <div class="afc-accent-block afc-cta afc-squiggle afc-squiggle--left afc-squiggle--right">
+                <div class="afc-container">
+                    <p class="paragraph-32 text-bold text-center">Ready to get healthy fruits and veggies delivered to
+                        your
+                        doorstep?
+                    </p>
+                    <button class="afc-button center-block">Choose you package</button>
+                </div>
+            </div>
+            <footer class="afc-footer">
+                <div class="afc-footer__items">
+                    <div class="afc-container">
+                        <div class="afc-footer__item">
+                            <h5>Customer Service</h5>
+                            <ul>
+                                <li>Terms and conditions</li>
+                                <li>Contact us</li>
+                            </ul>
+                        </div>
+                        <div class="afc-footer__item">
+                            <h5>Our Company</h5>
+                            <ul>
+                                <li>About</li>
+                                <li>How it works</li>
+                                <li>Choose you package</li>
+                            </ul>
+                        </div>
+                        <div class="afc-footer__item">
+                            <h5>Contact us</h5>
+                            <ul>
+                                <li>(111) 111-1111<br>MON-FRI 9AM-5PM ET</li>
+                                <li>email@youremail.com</li>
+                            </ul>
+                        </div>
+                        <div class="afc-footer__item">
+                            <h5>Let's be friends</h5>
+                            <p>Follow us for recipe videos, tips from Ned, and weekly produce sneak peeks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="afc-footer__footer">
+                    <div class="afc-container">
+                        Web design and development by Rinnova Creative
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
+
+    <!-- afc site JS -->
+    <script src="scripts.js"></script>
 </body>
 
 </html>

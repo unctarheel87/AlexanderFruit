@@ -1,48 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Check out</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="https://js.stripe.com/v3/"></script>
 </head>
+<script src="https://js.stripe.com/v3/"></script>
+<style>
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .afc__payment-form {
+    max-width: 400px;
+  }
+
+  .afc__payment-form button {
+    margin-top: 1.5em;
+  }
+
+  .afc__form-field {
+    margin-top: 1em;
+  }
+
+  .afc__form-field--long {
+    flex-basis: 80%;
+  }
+
+  .afc__form-field>label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 0.75em;
+    font-weight: 700;
+  }
+
+  .afc__form-field>input,
+  .afc__form-field>textarea {
+    width: 100%;
+    padding: 7px 12px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+
+  .afc__form-field .StripeElement {
+    padding: 10px 12px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+
+  .afc__inline-form-fields {
+    display: flex;
+  }
+
+  .afc__inline-form-fields .afc__form-field:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  .afc__button {
+    font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #8cbb3f;
+    border-color: #8cbb3f;
+    padding: 0.5em 0.75em;
+    color: #fff;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+  }
+
+  .afc__button:hover {
+    background: #5a7720;
+    border-color: #5a7720;
+  }
+
+  .afc__button:disabled {
+    background: #C5DD9F;
+    border-color: #C5DD9F;
+  }
+</style>
+
 <body>
+  <p>All fields are required unless otherwise noted.</p>
   <div class="afc__payment-form">
     <form id="payment-form">
-      <div class="full-name">
+      <div class="afc__inline-form-fields">
         <div class="afc__form-field">
           <label>First name</label>
-          <input type="text" name="first-name">
+          <input type="text" name="first-name" required>
         </div>
         <div class="afc__form-field">
           <label>Last name</label>
-          <input type="text" name="last-name">
+          <input type="text" name="last-name" required>
         </div>
       </div>
       <div class="afc__form-field">
         <label>Email</label>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
       </div>
       <div class="afc__form-field">
         <label>Phone</label>
-        <input type="tel" name="phone">
+        <input type="tel" name="phone" required>
       </div>
-      <div class="afc__form-field">
-        <label>Delivery address</label>
-        <textarea name="address"></textarea>
+      <div class="afc__inline-form-fields">
+        <div class="afc__form-field afc__form-field--long">
+          <label>Delivery address</label>
+          <textarea name="address" required></textarea>
+        </div>
+        <div class="afc__form-field">
+          <label>Apt./Suite # (optional)</label>
+          <input type="text" name="apt-suite">
+        </div>
       </div>
       <div class="afc__form-field">
         <label>City</label>
-        <input type="text" name="city">
+        <input type="text" name="city" required>
       </div>
-      <div class="afc__form-field">
-        <label>State</label>
-        <input type="text" name="state">
-      </div>
-      <div class="afc__form-field">
-        <label>Zip code</label>
-        <input type="text" name="zip">
+      <div class="afc__inline-form-fields">
+        <div class="afc__form-field afc__form-field--long">
+          <label>State</label>
+          <input type="text" name="state" required>
+        </div>
+        <div class="afc__form-field">
+          <label>Zip code</label>
+          <input type="text" name="zip" required>
+        </div>
       </div>
       <div class="afc__form-field">
         <label>Payment</label>
@@ -53,14 +144,22 @@
         <div id="card-errors" role="alert"></div>
       </div>
 
-      <button id="submit" class="afc__button">Pay</button>
+      <button id="submit" class="afc__button">Pay and submit order</button>
     </form>
   </div>
 
   <script>
-    const stripe = Stripe('pk_test_fVKvhV5JXchL685gt2bl4hcX00eBMJvczm');
+    const stripe = Stripe('pk_live_2uKZPOOonpN4ZUX34Znh4pMs00w32f6jPH');
     const elements = stripe.elements();
+    const button = document.getElementById('submit');
+    const originalBtnText = button.textContent;
+    let errorOccured = false;
 
+    // error message
+    const errorMsg = document.createElement('p');
+    errorMsg.textContent = "An error has occurred.  Please try saving again."
+    errorMsg.style.color = "#ff0000";
+  
     const form = document.getElementById('payment-form');
     const inputs = form.elements;
 
@@ -73,17 +172,23 @@
     const cardElement = elements.create("card", { style: style });
     cardElement.mount("#card-element");
 
+    let customer;
+
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
-      const customer = {
+      if (errorOccured) form.removeChild(errorMsg);
+      button.setAttribute('disabled', '');
+      button.textContent = "Saving..."
+      customer = {
         firstName: inputs["first-name"].value,
         lastName: inputs["last-name"].value,
         email: inputs["email"].value,
         phone: inputs["phone"].value,
-        deliveryAddress: inputs["address"].value,
+        line1: inputs["address"].value,
+        line2: inputs["apt-suite"].value,
         city: inputs["city"].value,
         state: inputs["state"].value,
-        zip: inputs["zip"].value
+        postal_code: inputs["zip"].value
       }
       stripe.createPaymentMethod({
         type: 'card',
@@ -92,7 +197,7 @@
           address: {
             city: customer.city,
             line1: customer.deliveryAddress,
-            line2: null,
+            line2: customer.aptSuite ? customer.aptSuite : null,
             postal_code: customer.zip,
             state: customer.state
           },
@@ -105,20 +210,27 @@
 
     function stripePaymentMethodHandler(result) {
       if (result.error) {
+        errorOccured = true;
+        button.removeAttribute('disabled', '');
+        button.textContent = originalBtnText;
+        form.appendChild(errorMsg);
         // Show error in payment form
       } else {
         // Otherwise send paymentMethod.id to your server
-        fetch('/create-customer', {
+        let url = 'https://obscure-hollows-87629.herokuapp.com/create-customer';
+        url = "http://localhost:3000/create-customer";
+        const planId = 'plan_GzfJUQsroXTkI3';
+        fetch(url, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             customer_details: result.paymentMethod.billing_details,
-            payment_method: result.paymentMethod.id
+            customer_address: customer,
+            payment_method: result.paymentMethod.id,
+            plan_id: planId
           }),
         }).then(function (result) {
-          return result.json();
-        }).then(function () {
-          console.log('success');
+          window.location.href = "https://www.alexanderfruit.com/confirmation.html"
         });
       }
     }
