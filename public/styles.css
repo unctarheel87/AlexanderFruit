@@ -35,8 +35,11 @@ button {
   100% {
     opacity: 1; } }
 
-.afc-animate--in p, .afc-animate--in h1, .afc-animate--in h2, .afc-animate--in h3, .afc-animate--in h4, .afc-animate--in h5, .afc-animate--in li, .afc-animate--in blockquote {
-  animation: animateIn 2000ms ease-in-out; }
+.afc-animate--in p, .afc-animate--in h1, .afc-animate--in h2, .afc-animate--in h3, .afc-animate--in h4, .afc-animate--in h5, .afc-animate--in blockquote {
+  animation: animateIn 1500ms ease-in-out; }
+
+.afc-hide-block-text p, .afc-hide-block-text h1, .afc-hide-block-text h2, .afc-hide-block-text h3, .afc-hide-block-text h4, .afc-hide-block-text h5, .afc-hide-block-text blockquote {
+  opacity: 0; }
 
 /******** COMPONENTS ********/
 .afc-button {
@@ -123,7 +126,7 @@ a.afc-button {
     background-size: contain;
     height: 60px;
     width: 200px;
-    left: -24px;
+    left: -36px;
     top: 16px;
     transform: rotate(180deg); }
   .afc-squiggle--right:after {
@@ -135,7 +138,7 @@ a.afc-button {
     height: 60px;
     width: 200px;
     bottom: 24px;
-    right: -24px;
+    right: -36px;
     transform: rotate(180deg); }
 
 /** UTILITY CLASSES */

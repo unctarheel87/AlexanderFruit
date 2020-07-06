@@ -27,27 +27,31 @@
   let options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1,
+    threshold: 0.01,
   };
 
   let observer = new IntersectionObserver(callback, options);
 
-  let target = document.querySelector('.afc-packages');
-  console.log(target);
-  observer.observe(target);
+  let container = document.querySelector('.page-container');
+  let targets = container.querySelectorAll(
+    '.page-container > section, .page-container > div'
+  );
+  // targets[0].classList.add('afc-hide-block-text');
+  console.log(targets);
+
+  Array.prototype.forEach.call(targets, function (target) {
+    observer.observe(target);
+  });
 
   function callback(entries, observer) {
     entries.forEach((entry) => {
-      console.log(entry.isIntersecting);
-      // Each entry describes an intersection change for one observed
-      // target element:
-      //   entry.boundingClientRect
-      //   entry.intersectionRatio
-      //   entry.intersectionRect
-      //   entry.isIntersecting
-      //   entry.rootBounds
-      //   entry.target
-      //   entry.time
+      if (entry.isIntersecting) {
+        entry.target.classList.add('afc-animate--in');
+      } else {
+        if (entry.target.classList.contains('afc-animate--in')) {
+          entry.target.classList.remove('afc-animate--in');
+        }
+      }
     });
   }
 })();

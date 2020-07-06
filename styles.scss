@@ -70,8 +70,14 @@ button {
     100% { opacity: 1 }
   }
 
-  p, h1, h2, h3, h4, h5, li, blockquote {
-    animation: animateIn 2000ms ease-in-out;
+  p, h1, h2, h3, h4, h5, blockquote {
+    animation: animateIn 1500ms ease-in-out;
+  }
+}
+
+.afc-hide-block-text {
+  p, h1, h2, h3, h4, h5, blockquote {
+    opacity: 0;
   }
 }
 
