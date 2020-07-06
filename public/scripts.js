@@ -22,4 +22,32 @@
       mobileNav.classList.remove('afc-mobile-nav--open');
     }
   }
+
+  // INTERSECTION OBSERVER
+  let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  };
+
+  let observer = new IntersectionObserver(callback, options);
+
+  let target = document.querySelector('.afc-packages');
+  console.log(target);
+  observer.observe(target);
+
+  function callback(entries, observer) {
+    entries.forEach((entry) => {
+      console.log(entry.isIntersecting);
+      // Each entry describes an intersection change for one observed
+      // target element:
+      //   entry.boundingClientRect
+      //   entry.intersectionRatio
+      //   entry.intersectionRect
+      //   entry.isIntersecting
+      //   entry.rootBounds
+      //   entry.target
+      //   entry.time
+    });
+  }
 })();

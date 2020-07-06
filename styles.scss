@@ -64,13 +64,24 @@ button {
   cursor: pointer;
 }
 
+.afc-animate--in {
+  @keyframes animateIn {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }
+
+  p, h1, h2, h3, h4, h5, li, blockquote {
+    animation: animateIn 2000ms ease-in-out;
+  }
+}
+
 /******** COMPONENTS ********/
 
 .afc-button {
   font-size: 1em;
   font-family: inherit;
   font-weight: 700;
-  display: block;
+  display: inline-block;
   letter-spacing: 1px;
   text-transform: uppercase;
   background: $button;
@@ -255,7 +266,6 @@ a.afc-button {
 }
 
 .center-block {
-  display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -420,6 +430,7 @@ a.afc-button {
   display: flex;
   justify-content: space-between;
   padding: 1em 2em;
+  align-items: center;
 
   &__logo {
     height: 6.5em;
@@ -428,7 +439,6 @@ a.afc-button {
 
 .afc-nav {
   ul {
-    padding-top: 1em;
 
     @include break-point('small') {
       display: none;
@@ -478,13 +488,13 @@ a.afc-button {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 620px;
+  height: 80vh;
   width: 100%;
   display: flex;
   align-items: center;
 
   @include break-point('small') {
-    height: 600px;
+    // height: 600px;
   }
 
   > div {
@@ -528,7 +538,7 @@ a.afc-button {
   }
 
   &--about {
-    background-image: url('images/photos/ABOUT_BANNER.jpg');
+    background-image: url('images/photos/HIGHRES_ABOUT_BANNER.jpg');
   }
 }
 
@@ -559,12 +569,8 @@ a.afc-button {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 540px;
+    height: 75vh;
     width: 100%;
-  
-    @include break-point('small') {
-      height: 400px;
-    }
 
     &--home-banana {
       background-image: url('images/photos/bananapink.jpg');
@@ -633,7 +639,7 @@ a.afc-button {
 
 .afc-package {
   width: 50%;
-  margin-top: 1em;
+  margin-top: 2em;
   padding: 0 1.5em;
   margin-bottom: 4.5em;
   display: flex;
@@ -663,7 +669,7 @@ a.afc-button {
       content: '';
       display: inline-block;
       position: absolute;
-      background: url('images/icons/light_triple_squiggle.png') no-repeat;
+      background: url('images/icons/medium_triple_squiggle.png') no-repeat;
       background-size: contain;
       height: 45px;
       width: 140px;
@@ -766,7 +772,6 @@ a.afc-button {
 
 .afc-footer {
   text-transform: uppercase;
-  border-top: 10px solid $primary;
 
   &__items {
      background: $light-accent;
@@ -813,10 +818,10 @@ a.afc-button {
   }
 
   &__footer {
-    background: $dark-accent;
+    background: $light-accent;
     text-align: center;
-    color: #fff;
-    padding: 1.25em 0;
+    padding-top: 0.5em;
+    padding-bottom: 2em;
     font-size: 0.875em;
   }
 }
