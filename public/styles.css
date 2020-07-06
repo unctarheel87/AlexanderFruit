@@ -35,8 +35,8 @@ button {
   100% {
     opacity: 1; } }
 
-.afc-animate--in p, .afc-animate--in h1, .afc-animate--in h2, .afc-animate--in h3, .afc-animate--in h4, .afc-animate--in h5, .afc-animate--in blockquote {
-  animation: animateIn 1500ms ease-in-out; }
+.afc-animate--in p, .afc-animate--in h1, .afc-animate--in h2, .afc-animate--in h3, .afc-animate--in h4, .afc-animate--in h5, .afc-animate--in a, .afc-animate--in button, .afc-animate--in blockquote, .afc-animate--in dt {
+  animation: animateIn 1000ms ease-in; }
 
 .afc-hide-block-text p, .afc-hide-block-text h1, .afc-hide-block-text h2, .afc-hide-block-text h3, .afc-hide-block-text h4, .afc-hide-block-text h5, .afc-hide-block-text blockquote {
   opacity: 0; }

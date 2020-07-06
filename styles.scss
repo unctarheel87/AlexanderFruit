@@ -70,8 +70,8 @@ button {
     100% { opacity: 1 }
   }
 
-  p, h1, h2, h3, h4, h5, blockquote {
-    animation: animateIn 1500ms ease-in-out;
+  p, h1, h2, h3, h4, h5, a, button, blockquote, dt {
+    animation: animateIn 1000ms ease-in;
   }
 }
 
