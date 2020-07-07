@@ -9,7 +9,6 @@
     onOpen: function (wrapper, clickedHeader, content) {
       clickedHeader.classList.add('afc-accordion__header--open');
       clickedHeader.classList.remove('afc-accordion__header--close');
-      console.dir(content);
     },
     onClose: function (wrapper, clickedHeader, content) {
       clickedHeader.classList.remove('afc-accordion__header--open');
@@ -17,5 +16,9 @@
       content.classList.remove('afc-accordion__content--open');
     },
   });
-  squeezebox.init();
+  // ensure all elements have been loaded before initializing
+  // (otherwise plugin may inaccurately calculate heights)
+  window.onload = function () {
+    squeezebox.init();
+  };
 })();
