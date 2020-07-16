@@ -505,8 +505,7 @@ a.afc-button {
 
 .afc-faq dd {
   margin-left: 2.125em;
-  padding-bottom: 1em;
-  margin-bottom: 0.5em; }
+  padding-bottom: 1em; }
 
 .afc-ned-test {
   position: relative; }
@@ -545,7 +544,8 @@ a.afc-button {
     margin-right: 0.5em; }
 
 .afc-accordion__content {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 0.25em; }
 
 .afc-cta {
   padding: 4em 0; }

@@ -87,7 +87,7 @@
         });
         elst.position = 'relative';
         elst.visibility = 'visible';
-        // self.hideEl(el);
+        self.hideEl(el);
         self.addTran(el);
       }
     },
