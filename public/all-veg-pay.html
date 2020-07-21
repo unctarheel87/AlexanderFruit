@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Adobe fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/iwo7mrm.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div id="mobile-nav" class="afc-mobile-nav">
+      <div class="afc-mobile-nav__header">
+        <a href="index.html"><img class="afc-mobile-nav__logo" src="images/icons/Secondarylogo@4x.png"></a>
+        <button id="mobilenav-close-btn" class="afc-mobile-nav__close-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+      <nav>
+        <ul>
+          <li class="afc-mobile-nav__menu-item"><a href="how-it-works.html">How it works</a></li>
+          <li class="afc-mobile-nav__menu-item"><a href="about.html">About</a></li>
+          <li class="afc-mobile-nav__menu-item afc-mobile-nav__menu-item--cta"><a href="choose-your-package.html">Choose
+              your package</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="page-container">
+      <header class="afc-header">
+        <a href="index.html"><img class="afc-header__logo" src="images/icons/Primarylogo@4x.png"></a>
+        <nav class="afc-nav">
+          <ul>
+            <li class="afc-nav__menu-item"><a href="how-it-works.html">How it works</a></li>
+            <li class="afc-nav__menu-item"><a href="about.html">About</a></li>
+            <li class="afc-nav__cta-btn"><a class="afc-button" href="choose-your-package.html">Choose your
+                package</button></a>
+          </ul>
+          <button id="mobile-nav-trigger" class="afc-nav__mobilenav-trigger">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor" /></svg>
+          </button>
+        </nav>
+      </header>
+
+      <body>
+        <div class="afc-container mb-L text-center">
+          <p class="paragraph-28">You're signing up for weekly deliveries of the All Veg Package.</p>
+          <p>Fill out the details below so we can get your healthy produce to the right door.</p>
+        </div>
+        <div class="afc-container mb-L">
+          <p class="text-center">All fields are required unless otherwise noted.</p>
+          <div class="afc-payment-form">
+            <form id="payment-form">
+              <div class="afc-inline-form-fields">
+                <div class="afc-form-field">
+                  <label>First name</label>
+                  <input type="text" name="first-name" required>
+                </div>
+                <div class="afc-form-field">
+                  <label>Last name</label>
+                  <input type="text" name="last-name" required>
+                </div>
+              </div>
+              <div class="afc-form-field">
+                <label>Email</label>
+                <input type="email" name="email" required>
+              </div>
+              <div class="afc-form-field">
+                <label>Phone</label>
+                <input type="tel" name="phone" required>
+              </div>
+              <div class="afc-inline-form-fields">
+                <div class="afc-form-field afc-form-field--long">
+                  <label>Delivery address</label>
+                  <textarea name="address" required></textarea>
+                </div>
+                <div class="afc-form-field">
+                  <label>Apt./Suite # (optional)</label>
+                  <input type="text" name="apt-suite">
+                </div>
+              </div>
+              <div class="afc-form-field">
+                <label>City</label>
+                <input type="text" name="city" required>
+              </div>
+              <div class="afc-inline-form-fields">
+                <div class="afc-form-field afc-form-field--long">
+                  <label>State</label>
+                  <input type="text" name="state" required>
+                </div>
+                <div class="afc-form-field">
+                  <label>Zip code</label>
+                  <input type="text" name="zip" required>
+                </div>
+              </div>
+              <div class="afc-form-field">
+                <label>Payment</label>
+                <div id="card-element">
+                  <!-- Elements will create input elements here -->
+                </div>
+                <!-- We'll put the error messages in this element -->
+                <div id="card-errors" role="alert"></div>
+              </div>
+              <div class="text-center">
+                <button id="submit" class="afc-button">Pay and submit order</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="afc-container mb-L text-center">
+          <p>ALL SIGN UPS AFTER SUNDAY WILL RECEIVE THEIR FIRST DELIVERY THE FOLLOWING WEEK.</p>
+        </div>
+        <footer class="afc-footer">
+          <div class="afc-footer__items">
+            <div class="afc-container">
+              <div class="afc-footer__item">
+                <h5>Customer Service</h5>
+                <ul>
+                  <li>Terms and conditions</li>
+                  <li>Contact us</li>
+                </ul>
+              </div>
+              <div class="afc-footer__item">
+                <h5>Our Company</h5>
+                <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="how-it-works.html">How it works</a></li>
+                  <li><a href="choose-your-package.html">Choose you package</a></li>
+                </ul>
+              </div>
+              <div class="afc-footer__item">
+                <h5>Contact us</h5>
+                <ul>
+                  <li>(111) 111-1111<br>MON-FRI 9AM-5PM ET</li>
+                  <li>email@youremail.com</li>
+                </ul>
+              </div>
+              <div class="afc-footer__item">
+                <h5>Let's be friends</h5>
+                <p>Follow us for recipe videos, tips from Ned, and weekly produce sneak peeks</p>
+              </div>
+            </div>
+          </div>
+          <div class="afc-footer__footer">
+            <div class="afc-container">
+              Web design and development by Rinnova Creative
+            </div>
+          </div>
+        </footer>
+    </div>
+  </div>
+
+  <!-- afc site JS -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="scripts.js"></script>
+  <script>
+    const stripe = Stripe('pk_live_2uKZPOOonpN4ZUX34Znh4pMs00w32f6jPH');
+    const elements = stripe.elements();
+    const button = document.getElementById('submit');
+    const originalBtnText = button.textContent;
+    let errorOccured = false;
+
+    // error message
+    const errorMsg = document.createElement('p');
+    errorMsg.textContent = "An error has occurred.  Please try saving again."
+    errorMsg.style.color = "#ff0000";
+
+    const form = document.getElementById('payment-form');
+    const inputs = form.elements;
+
+    const style = {
+      base: {
+        color: "#32325d",
+      }
+    };
+
+    const cardElement = elements.create("card", { style: style });
+    cardElement.mount("#card-element");
+
+    let customer;
+
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      if (errorOccured) form.removeChild(errorMsg);
+      button.setAttribute('disabled', '');
+      button.textContent = "Saving..."
+      customer = {
+        firstName: inputs["first-name"].value,
+        lastName: inputs["last-name"].value,
+        email: inputs["email"].value,
+        phone: inputs["phone"].value,
+        line1: inputs["address"].value,
+        line2: inputs["apt-suite"].value,
+        city: inputs["city"].value,
+        state: inputs["state"].value,
+        postal_code: inputs["zip"].value
+      }
+      stripe.createPaymentMethod({
+        type: 'card',
+        card: cardElement,
+        billing_details: {
+          address: {
+            city: customer.city,
+            line1: customer.deliveryAddress,
+            line2: customer.aptSuite ? customer.aptSuite : null,
+            postal_code: customer.zip,
+            state: customer.state
+          },
+          email: customer.email,
+          name: customer.firstName + ' ' + customer.lastName,
+          phone: customer.phone
+        }
+      }).then(stripePaymentMethodHandler);
+    });
+
+    function stripePaymentMethodHandler(result) {
+      if (result.error) {
+        errorOccured = true;
+        button.removeAttribute('disabled', '');
+        button.textContent = originalBtnText;
+        form.appendChild(errorMsg);
+        // Show error in payment form
+      } else {
+        // Otherwise send paymentMethod.id to your server
+        let url = 'https://obscure-hollows-87629.herokuapp.com/create-customer';
+        url = "http://localhost:3000/create-customer";
+        const planId = 'plan_GzfJUQsroXTkI3';
+        fetch(url, {
+          method: 'post',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            customer_details: result.paymentMethod.billing_details,
+            customer_address: customer,
+            payment_method: result.paymentMethod.id,
+            plan_id: planId
+          }),
+        }).then(function (result) {
+          window.location.href = "https://www.alexanderfruit.com/confirmation.html"
+        });
+      }
+    }
+  </script>
+</body>
+
+</html>

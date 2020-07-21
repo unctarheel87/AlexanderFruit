@@ -54,6 +54,14 @@ p {
   }
 }
 
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -157,6 +165,11 @@ a.afc-button {
 
   &--dark {
     background: #e5e5e5;
+
+    @include break-point('small') {
+      margin-bottom: 0;
+      padding-bottom: 3.5em;
+    }
   }
 }
 
@@ -592,15 +605,15 @@ a.afc-button {
     }
 
     &--hiw-ned {
-      background-image: url('images/photos/howitworks_NEDTEST2.jpg');
+      background-image: url('images/photos/NEW_HOWITWORKS_NEDTEST2.jpg');
     }
 
     &--hiw-berries {
-      background-image: url('images/photos/PINKBERRIES.jpg');
+      background-image: url('images/photos/berrycherry.jpg');
     }
 
     &--hiw-veggies {
-      background-image: url('images/photos/CILANTROAVOCADO.jpg');
+      background-image: url('images/photos/NEW_CILANTROAVOCADO.jpg');
     }
 
     &--about-corn {
@@ -671,6 +684,7 @@ a.afc-button {
 
   &__desc {
     margin-top: 0em;
+    margin-bottom: 1.5em;
   }
 
   &__img {
@@ -684,18 +698,18 @@ a.afc-button {
       width: 100%;
     }
 
-    &:before {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      background: url('images/icons/medium_triple_squiggle.png') no-repeat;
-      background-size: contain;
-      height: 45px;
-      width: 140px;
-      left: -100px;
-      bottom: 40px;
-      transform: rotate(180deg);
-    }
+    // &:before {
+    //   content: '';
+    //   display: inline-block;
+    //   position: absolute;
+    //   background: url('images/icons/medium_triple_squiggle.png') no-repeat;
+    //   background-size: contain;
+    //   height: 45px;
+    //   width: 140px;
+    //   left: -100px;
+    //   bottom: 40px;
+    //   transform: rotate(180deg);
+    // }
   }
 
   &__price {
@@ -847,50 +861,51 @@ a.afc-button {
 
 /****** FORM *******/
 
-// .afc-payment-form {
-//   max-width: 400px;
-//   margin: 0 auto;
+.afc-payment-form {
+  max-width: 400px;
+  margin: 0 auto;
 
-//   button {
-//     margin-top: 1.5em;
-//   }
-// }
+  button {
+    margin-top: 2.5em;
+    width: 100%;
+  }
+}
 
-// .afc-form-field {
-//   margin-top: 1em;
+.afc-form-field {
+  margin-top: 1em;
 
-//   &--long {
-//     flex-basis: 80%;
-//   }
+  &--long {
+    flex-basis: 80%;
+  }
 
-//   > label {
-//     display: block;
-//     margin-bottom: 0.5em;
-//     font-size: 0.75em;
-//     font-weight: 700;
-//   }
+  > label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 0.75em;
+    font-weight: 700;
+  }
 
-//   > input,
-//   > textarea {
-//     width: 100%;
-//     padding: 7px 12px;
-//     border: 1px solid #b8b8b8;
-//     border-radius: 3px;
-//     font-size: 1em;
-//   }
+  > input,
+  > textarea {
+    width: 100%;
+    padding: 7px 12px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    font-size: 1em;
+  }
 
-//   .StripeElement {
-//     padding: 10px 12px;
-//     border: 1px solid #b8b8b8;
-//     border-radius: 3px;
-//     font-size: 1em;
-//   }
-// }
+  .StripeElement {
+    padding: 10px 12px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+}
 
-// .afc-inline-form-fields {
-//   display: flex;
+.afc-inline-form-fields {
+  display: flex;
 
-//   .afc-form-field:not(:last-child) {
-//     margin-right: 1em;
-//   }
-// }
+  .afc-form-field:not(:last-child) {
+    margin-right: 1em;
+  }
+}
