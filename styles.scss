@@ -55,7 +55,7 @@ p {
 }
 
 a {
-  transition: 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
   &,
   &:visited,
   &:active,
@@ -64,7 +64,7 @@ a {
   }
   &:hover {
     text-decoration: none;
-    color: #7c7c7c;
+    color: #616161;
   }
 }
 
