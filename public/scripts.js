@@ -37,7 +37,7 @@
     '.page-container > section, .page-container > div'
   );
   // targets[0].classList.add('afc-hide-block-text');
-  console.log(targets);
+  // console.log(targets);
 
   Array.prototype.forEach.call(targets, function (target) {
     observer.observe(target);
