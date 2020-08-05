@@ -442,7 +442,7 @@ a.afc-button {
   background: $dark-accent;
   padding: 2.5em 0;
 
-  p {
+  p, h1, h2, h3, h4, h5 {
     color: #fff;
   }
 
@@ -604,7 +604,7 @@ a.afc-button {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 75vh;
+    height: 85vh;
     width: 100%;
 
     &--home-banana {
@@ -612,7 +612,7 @@ a.afc-button {
     }
 
     &--hiw-ned {
-      background-image: url('images/photos/NEW_HOWITWORKS_NEDTEST2.jpg');
+      background-image: url('images/photos/pattypan1.jpg');
     }
 
     &--hiw-berries {
@@ -751,7 +751,7 @@ a.afc-button {
 
   dd {
     margin-left: 2.125em;
-    padding-bottom: 1em;
+    padding-bottom: 1.25em;
   }
 }
 

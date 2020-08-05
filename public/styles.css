@@ -306,7 +306,7 @@ a.afc-button {
 .afc-accent-block {
   background: #5f823e;
   padding: 2.5em 0; }
-  .afc-accent-block p {
+  .afc-accent-block p, .afc-accent-block h1, .afc-accent-block h2, .afc-accent-block h3, .afc-accent-block h4, .afc-accent-block h5 {
     color: #fff; }
   .afc-accent-block .afc-section-heading {
     color: #fff;
@@ -413,12 +413,12 @@ a.afc-button {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 75vh;
+  height: 85vh;
   width: 100%; }
   .afc-image-container__full--home-banana {
     background-image: url("images/photos/bananapink.jpg"); }
   .afc-image-container__full--hiw-ned {
-    background-image: url("images/photos/NEW_HOWITWORKS_NEDTEST2.jpg"); }
+    background-image: url("images/photos/pattypan1.jpg"); }
   .afc-image-container__full--hiw-berries {
     background-image: url("images/photos/berrycherry.jpg"); }
   .afc-image-container__full--hiw-veggies {
@@ -508,7 +508,7 @@ a.afc-button {
 
 .afc-faq dd {
   margin-left: 2.125em;
-  padding-bottom: 1em; }
+  padding-bottom: 1.25em; }
 
 .afc-ned-test {
   position: relative; }

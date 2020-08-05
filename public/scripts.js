@@ -30,7 +30,7 @@
     threshold: 0.01,
   };
 
-  let observer = new IntersectionObserver(callback, options);
+  let observer = new IntersectionObserver(observerCb, options);
 
   let container = document.querySelector('.page-container');
   let targets = container.querySelectorAll(
@@ -43,7 +43,7 @@
     observer.observe(target);
   });
 
-  function callback(entries, observer) {
+  function observerCb(entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('afc-animate--in');
