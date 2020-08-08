@@ -54,6 +54,7 @@
         <div class="afc-container mb-L text-center">
           <p class="paragraph-28">You're signing up for weekly deliveries of the All Veg Package.</p>
           <p>Fill out the details below so we can get your healthy produce to the right door.</p>
+          <p>A small 2% non prepared foods TAX will be added to your order.</p>
         </div>
         <div class="afc-container mb-L">
           <p class="text-center">All fields are required unless otherwise noted.</p>
@@ -229,7 +230,6 @@
       } else {
         // Otherwise send paymentMethod.id to your server
         let url = 'https://obscure-hollows-87629.herokuapp.com/create-customer';
-        url = "http://localhost:3000/create-customer";
         const planId = 'plan_GzfJUQsroXTkI3';
         fetch(url, {
           method: 'post',
