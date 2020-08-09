@@ -161,6 +161,10 @@ a.afc-button {
 
 .page-container {
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .afc-section {

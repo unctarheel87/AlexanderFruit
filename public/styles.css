@@ -91,7 +91,11 @@ a.afc-button {
   padding: 0 0.75em; }
 
 .page-container {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .afc-section {
   padding: 2em 0; }
