@@ -273,7 +273,7 @@ a.afc-button {
 }
 
 .flex-wrap {
-  flex-wrap: wrap !important; 
+  flex-wrap: wrap !important;
 }
 
 .flex-reverse-wrap {
@@ -328,6 +328,7 @@ a.afc-button {
       font-size: 1.375em !important;
     }
   }
+
   &-32 {
     font-size: 2em !important;
   }
@@ -509,6 +510,7 @@ a.afc-button {
       border-bottom: 2px solid $button;
     }
   }
+
   &__cta-btn {
     display: inline-block;
   }
@@ -603,7 +605,7 @@ a.afc-button {
 }
 
 .afc-image-container {
-  
+
   &__full {
     background-size: cover;
     background-position: center center;
@@ -690,7 +692,7 @@ a.afc-button {
   }
 
   p, li {
-      color: $testimonials-text;
+    color: $testimonials-text;
   }
 
   &__desc {
@@ -792,6 +794,7 @@ a.afc-button {
       vertical-align: middle;
       margin-right: 0.5em;
     }
+
     &--open:before {
       content: '';
       background: url('images/icons/MINUSSIGN.png') no-repeat;
@@ -818,7 +821,7 @@ a.afc-button {
   text-transform: uppercase;
 
   &__items {
-     background: $light-accent;
+    background: $light-accent;
 
     .afc-container {
       display: flex;
@@ -841,7 +844,7 @@ a.afc-button {
       text-align: center;
       margin-bottom: 2.5em;
     }
-    
+
     &:not(:last-child) {
       border-right: 1px solid $main-text;
       padding-right: 1em;
@@ -934,4 +937,87 @@ a.afc-button {
   .afc-form-field:not(:last-child) {
     margin-right: 1em;
   }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #EAEAEA;
+  padding: 1rem 1.5rem;
+  width: 40%;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include break-point('small') {
+    width: 90%;
+  }
+
+  form {
+    input {
+      border: 1px solid $testimonials-text;
+      font-family: p22-mackinac-pro, serif;
+      text-align: center;
+      padding: 0.5rem;
+      width: 80%;
+    }
+
+    input[type="email"] {
+      margin-top: 1rem;
+    }
+
+    button {
+      background-color: $button;
+      margin-top: 1rem;
+      border: none;
+      font-family: p22-mackinac-pro, serif;
+      padding: 1rem 0.7rem;
+      width: 18rem;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-size: 2rem;
+  align-self: flex-end;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }

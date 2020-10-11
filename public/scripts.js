@@ -36,8 +36,6 @@
   let targets = container.querySelectorAll(
     '.page-container > section, .page-container > div'
   );
-  // targets[0].classList.add('afc-hide-block-text');
-  console.log(targets);
 
   Array.prototype.forEach.call(targets, function (target) {
     observer.observe(target);
@@ -53,5 +51,38 @@
         }
       }
     });
+  }
+
+  const modal = document.querySelector('.modal');
+  const closeButton = document.querySelector('.close-button');
+  let modalAlreadyShown = getModalSessionEntry();
+
+  closeButton.addEventListener('click', toggleModal);
+
+  window.addEventListener('click', windowOnClick);
+
+  function createModalSessionEntry() {
+    sessionStorage.setItem('modalShown', 'false');
+    return false;
+  }
+
+  function getModalSessionEntry() {
+    if (sessionStorage.getItem('modalShown')) return true;
+    return createModalSessionEntry();
+  }
+
+  setTimeout(function () {
+    // if (!modalAlreadyShown) {
+      toggleModal();
+      sessionStorage.setItem('modalShown', 'true');
+    // }
+  }, 1500);
+
+  function windowOnClick(event) {
+    if (event.target === modal) toggleModal();
+  }
+
+  function toggleModal() {
+    modal.classList.toggle('show-modal');
   }
 })();
