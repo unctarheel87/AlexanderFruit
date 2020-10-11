@@ -627,6 +627,9 @@ a.afc-button {
   .afc-inline-form-fields .afc-form-field:not(:last-child) {
     margin-right: 1em; }
 
+.hidden {
+  display: none; }
+
 .modal {
   position: fixed;
   left: 0;
@@ -664,15 +667,7 @@ a.afc-button {
   .modal-content form input[type="email"] {
     margin-top: 1rem; }
   .modal-content form button {
-    background-color: #8cbb3f;
-    margin-top: 1rem;
-    border: none;
-    font-family: p22-mackinac-pro, serif;
-    padding: 1rem 0.7rem;
-    width: 18rem;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem; }
+    margin-top: 1rem; }
   .modal-content p {
     font-size: 1rem; }
 

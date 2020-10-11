@@ -55,11 +55,16 @@
 
   const modal = document.querySelector('.modal');
   const closeButton = document.querySelector('.close-button');
+  const modalSubmitButton = document.querySelector('.modalSubmitButton');
+  const promoFormContent = document.querySelector('.promo-form-content');
+  const submittedFormContent = document.querySelector('.submitted-form-content');
   let modalAlreadyShown = getModalSessionEntry();
 
   closeButton.addEventListener('click', toggleModal);
 
   window.addEventListener('click', windowOnClick);
+
+  modalSubmitButton.addEventListener('click', toggleSubmittedFormContent);
 
   function createModalSessionEntry() {
     sessionStorage.setItem('modalShown', 'false');
@@ -84,5 +89,10 @@
 
   function toggleModal() {
     modal.classList.toggle('show-modal');
+  }
+
+  function toggleSubmittedFormContent() {
+    submittedFormContent.classList.toggle('hidden');
+    promoFormContent.classList.toggle('hidden');
   }
 })();

@@ -939,6 +939,10 @@ a.afc-button {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .modal {
   position: fixed;
   left: 0;
@@ -981,17 +985,8 @@ a.afc-button {
     input[type="email"] {
       margin-top: 1rem;
     }
-
     button {
-      background-color: $button;
       margin-top: 1rem;
-      border: none;
-      font-family: p22-mackinac-pro, serif;
-      padding: 1rem 0.7rem;
-      width: 18rem;
-      color: white;
-      font-weight: bold;
-      font-size: 1rem;
     }
   }
 
