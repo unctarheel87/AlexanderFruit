@@ -36,8 +36,6 @@
   let targets = container.querySelectorAll(
     '.page-container > section, .page-container > div'
   );
-  // targets[0].classList.add('afc-hide-block-text');
-  console.log(targets);
 
   Array.prototype.forEach.call(targets, function (target) {
     observer.observe(target);
@@ -53,5 +51,54 @@
         }
       }
     });
+  }
+
+  const modal = document.querySelector('.modal');
+  const closeButton = document.querySelector('.close-button');
+  const modalSubmitButton = document.querySelector('.modalSubmitButton');
+  const promoFormContent = document.querySelector('.promo-form-content');
+  const submittedFormContent = document.querySelector('.submitted-form-content');
+
+  closeButton.addEventListener('click', toggleModal);
+
+  window.addEventListener('click', windowOnClick);
+
+  modalSubmitButton.addEventListener('click', toggleSubmittedFormContent);
+
+  function createModalSessionEntry() {
+    sessionStorage.setItem('modalShown', 'false');
+    return false;
+  }
+
+  function getModalSessionEntry() {
+    if (sessionStorage.getItem('modalShown')) return true;
+    return createModalSessionEntry();
+  }
+
+  setTimeout(function () {
+    // if (!modalAlreadyShown) {
+      toggleModal();
+      sessionStorage.setItem('modalShown', 'true');
+    // }
+  }, 1500);
+
+  function windowOnClick(event) {
+    if (event.target === modal) toggleModal();
+  }
+
+  function toggleModal() {
+    modal.classList.toggle('show-modal');
+  }
+
+  function toggleSubmittedFormContent() {
+    const firstName = document.forms.subscribeForm.MERGE1.value;
+    const lastName = document.forms.subscribeForm.MERGE2.value;
+    const email = document.forms.subscribeForm.MERGE0.value;
+    if (firstName.length > 0 && lastName.length > 0 && email.length > 0) {
+      submittedFormContent.classList.toggle('hidden');
+      promoFormContent.classList.toggle('hidden');
+      return;
+    }
+    return false;
   }
 })();
