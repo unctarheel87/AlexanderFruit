@@ -966,13 +966,17 @@ a.afc-button {
   transform: translate(-50%, -50%);
   background-color: #EAEAEA;
   padding: 1rem 1.5rem;
-  width: 40%;
+  width: 25%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   @include break-point('small') {
     width: 90%;
+  }
+
+  p.subheading {
+    line-height: 1.4rem;
   }
 
   form {

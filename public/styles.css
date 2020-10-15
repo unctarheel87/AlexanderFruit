@@ -652,7 +652,7 @@ a.afc-button {
   transform: translate(-50%, -50%);
   background-color: #EAEAEA;
   padding: 1rem 1.5rem;
-  width: 40%;
+  width: 25%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -660,6 +660,8 @@ a.afc-button {
   @media (max-width: 40em) {
     .modal-content {
       width: 90%; } }
+  .modal-content p.subheading {
+    line-height: 1.4rem; }
   .modal-content form input {
     border: 1px solid #606261;
     font-family: p22-mackinac-pro, serif;
