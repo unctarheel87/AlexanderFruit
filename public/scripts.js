@@ -81,7 +81,7 @@
       toggleModal();
       sessionStorage.setItem('modalShown', 'true');
     }
-  }, 1500);
+  }, 10000);
 
   function windowOnClick(event) {
     if (event.target === modal) toggleModal();
