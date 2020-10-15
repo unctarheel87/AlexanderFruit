@@ -954,6 +954,9 @@ a.afc-button {
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  @include break-point('small') {
+    z-index: 1;
+  }
 }
 
 .modal-content {
@@ -964,7 +967,6 @@ a.afc-button {
   background-color: #EAEAEA;
   padding: 1rem 1.5rem;
   width: 40%;
-  border-radius: 0.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -987,6 +989,11 @@ a.afc-button {
     }
     button {
       margin-top: 1rem;
+      width: 90%;
+    }
+
+    p.afc-testimonials--text {
+     color: $testimonials-text;
     }
   }
 

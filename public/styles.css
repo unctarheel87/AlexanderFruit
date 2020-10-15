@@ -641,6 +641,9 @@ a.afc-button {
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
+  @media (max-width: 40em) {
+    .modal {
+      z-index: 1; } }
 
 .modal-content {
   position: absolute;
@@ -650,7 +653,6 @@ a.afc-button {
   background-color: #EAEAEA;
   padding: 1rem 1.5rem;
   width: 40%;
-  border-radius: 0.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -667,7 +669,10 @@ a.afc-button {
   .modal-content form input[type="email"] {
     margin-top: 1rem; }
   .modal-content form button {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    width: 90%; }
+  .modal-content form p.afc-testimonials--text {
+    color: #606261; }
   .modal-content p {
     font-size: 1rem; }
 

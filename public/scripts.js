@@ -58,7 +58,6 @@
   const modalSubmitButton = document.querySelector('.modalSubmitButton');
   const promoFormContent = document.querySelector('.promo-form-content');
   const submittedFormContent = document.querySelector('.submitted-form-content');
-  let modalAlreadyShown = getModalSessionEntry();
 
   closeButton.addEventListener('click', toggleModal);
 
@@ -92,7 +91,14 @@
   }
 
   function toggleSubmittedFormContent() {
-    submittedFormContent.classList.toggle('hidden');
-    promoFormContent.classList.toggle('hidden');
+    const firstName = document.forms.subscribeForm.MERGE1.value;
+    const lastName = document.forms.subscribeForm.MERGE2.value;
+    const email = document.forms.subscribeForm.MERGE0.value;
+    if (firstName.length > 0 && lastName.length > 0 && email.length > 0) {
+      submittedFormContent.classList.toggle('hidden');
+      promoFormContent.classList.toggle('hidden');
+      return;
+    }
+    return false;
   }
 })();
