@@ -72,7 +72,9 @@
   }
 
   function getModalSessionEntry() {
-    if (sessionStorage.getItem('modalShown')) return true;
+    let modalShown = sessionStorage.getItem('modalShown');
+    if (modalShown === 'false') return false;
+    if (modalShown === 'true') return true;
     return createModalSessionEntry();
   }
 
