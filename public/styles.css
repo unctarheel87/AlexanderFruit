@@ -227,6 +227,14 @@ a.afc-button {
 .paragraph-32 {
   font-size: 2em !important; }
 
+@media (max-width: 40em) {
+  .hide--small {
+    display: none; } }
+
+@media (min-width: 40em) {
+  .hide--desktop {
+    display: none; } }
+
 /********* MOBILE-NAV *********/
 .afc-mobile-nav {
   display: none;
@@ -542,6 +550,9 @@ a.afc-button {
 .afc-accordion__content {
   overflow: hidden;
   padding-bottom: 0.25em; }
+  @media (max-width: 40em) {
+    .afc-accordion__content[aria-hidden="false"] {
+      max-height: 13rem !important; } }
 
 .afc-cta {
   padding: 4em 0; }

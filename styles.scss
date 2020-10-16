@@ -334,6 +334,20 @@ a.afc-button {
   }
 }
 
+.hide {
+  &--small {
+    @include break-point('small') {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    @include break-point('gt-small') {
+      display: none;
+    }
+  }
+}
+
 /********* MOBILE-NAV *********/
 
 .afc-mobile-nav {
@@ -810,6 +824,11 @@ a.afc-button {
   &__content {
     overflow: hidden;
     padding-bottom: 0.25em;
+    &[aria-hidden="false"] {
+      @include break-point('small') {
+        max-height: 13rem !important;
+      }
+    }
   }
 }
 
