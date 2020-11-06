@@ -160,6 +160,11 @@ a.afc-button {
 }
 
 .page-container {
+  // Remove the padding when the announcement bar is done
+  padding-top: 50px;
+  @include break-point('small') {
+    padding-top: 90px;
+  }
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;
@@ -1054,21 +1059,31 @@ a.afc-button {
   position: fixed;
   z-index: 1;
   text-align: center;
+  @include break-point('small') {
+    height: 70px;
+  }
+
   p {
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+
     a {
       color: white;
       transition: 0.5s;
       position: relative;
+      text-decoration: none;
+      cursor: pointer;
+
       &:hover {
         color: darken(white, 10%);
+
         &::after {
           transform: scaleX(1);
           transform-origin: left;
         }
       }
+
       &::after {
         position: absolute;
         content: "";
@@ -1076,7 +1091,7 @@ a.afc-button {
         height: 3px;
         top: 100%;
         left: 0;
-        background: #ff7000;
+        background: white;
         transition: transform 0.5s;
         transform: scaleX(0);
         transform-origin: right;

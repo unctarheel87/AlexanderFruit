@@ -91,11 +91,15 @@ a.afc-button {
   padding: 0 0.75em; }
 
 .page-container {
+  padding-top: 50px;
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media (max-width: 40em) {
+    .page-container {
+      padding-top: 90px; } }
 
 .afc-section {
   padding: 2em 0; }
@@ -715,6 +719,9 @@ a.afc-button {
   position: fixed;
   z-index: 1;
   text-align: center; }
+  @media (max-width: 40em) {
+    .announcement-bar {
+      height: 70px; } }
   .announcement-bar p {
     color: white;
     text-transform: uppercase;
@@ -722,7 +729,9 @@ a.afc-button {
     .announcement-bar p a {
       color: white;
       transition: 0.5s;
-      position: relative; }
+      position: relative;
+      text-decoration: none;
+      cursor: pointer; }
       .announcement-bar p a:hover {
         color: #e6e6e6; }
         .announcement-bar p a:hover::after {
@@ -735,7 +744,7 @@ a.afc-button {
         height: 3px;
         top: 100%;
         left: 0;
-        background: #ff7000;
+        background: white;
         transition: transform 0.5s;
         transform: scaleX(0);
         transform-origin: right; }
