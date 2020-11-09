@@ -54,11 +54,17 @@
   }
 
   const modal = document.querySelector('.modal');
+  const promoButtonModal = document.querySelector('#promoButtonModal');
   const closeButton = document.querySelector('.close-button');
   const modalSubmitButton = document.querySelector('.modalSubmitButton');
   const promoFormContent = document.querySelector('.promo-form-content');
   const submittedFormContent = document.querySelector('.submitted-form-content');
   let modalAlreadyShown = getModalSessionEntry();
+
+  promoButtonModal.addEventListener('click', () => {
+    toggleModal();
+    sessionStorage.setItem('modalShown', 'true');
+  });
 
   closeButton.addEventListener('click', toggleModal);
 
