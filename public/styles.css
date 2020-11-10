@@ -724,7 +724,6 @@ a.afc-button {
       height: 70px; } }
   .announcement-bar p {
     color: white;
-    text-transform: uppercase;
     font-weight: bold; }
     .announcement-bar p a {
       color: white;
