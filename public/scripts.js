@@ -86,8 +86,8 @@
 
   setTimeout(function () {
     if (!modalAlreadyShown) {
-      toggleModal();
-      sessionStorage.setItem('modalShown', 'true');
+      // toggleModal();
+      // sessionStorage.setItem('modalShown', 'true');
     }
   }, 10000);
 
