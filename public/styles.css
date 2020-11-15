@@ -725,18 +725,12 @@ a.afc-button {
   .announcement-bar p {
     color: white;
     font-weight: bold; }
-    .announcement-bar p a {
+    .announcement-bar p span {
       transition: 0.5s;
       position: relative;
       text-decoration: none;
-      cursor: pointer;
       color: #e8e8e8; }
-      .announcement-bar p a:hover {
-        color: #cfcfcf; }
-        .announcement-bar p a:hover::after {
-          transform: scaleX(0);
-          transform-origin: left; }
-      .announcement-bar p a::after {
+      .announcement-bar p span::after {
         position: absolute;
         content: "";
         width: 100%;

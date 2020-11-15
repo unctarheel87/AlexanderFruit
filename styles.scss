@@ -1067,21 +1067,11 @@ a.afc-button {
     color: white;
     font-weight: bold;
 
-    a {
+    span {
       transition: 0.5s;
       position: relative;
       text-decoration: none;
-      cursor: pointer;
       color: $light-accent;
-
-      &:hover {
-        color: darken($light-accent, 10%);
-
-        &::after {
-          transform: scaleX(0);
-          transform-origin: left;
-        }
-      }
 
       &::after {
         position: absolute;
