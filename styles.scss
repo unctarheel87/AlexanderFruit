@@ -1066,25 +1066,5 @@ a.afc-button {
   p {
     color: white;
     font-weight: bold;
-
-    span {
-      transition: 0.5s;
-      position: relative;
-      text-decoration: none;
-      color: $light-accent;
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 3px;
-        top: 100%;
-        left: 0;
-        background: $light-accent;
-        transition: transform 0.5s;
-        transform: scaleX(1);
-        transform-origin: right;
-      }
-    }
   }
 }
