@@ -721,7 +721,7 @@ a.afc-button {
   text-align: center; }
   @media (max-width: 40em) {
     .announcement-bar {
-      height: 70px; } }
+      height: 90px; } }
   .announcement-bar p {
     color: white;
     font-weight: bold; }
